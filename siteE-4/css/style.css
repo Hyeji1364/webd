@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#wrap {
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+}
+
+#header {
+    width: 200px;
+    height: 100%;
+}
+
+#header .logo {
+    width: 100%;
+    height: 20%;
+    background-color: #cfc6c6;
+}
+
+#header .nav {
+    width: 100%;
+    height: 80%;
+    background-color: #c4c0c0;
+}
+
+#contents {
+    width: 400px;
+    height: 100%;
+}
+
+#contents .banner {
+    width: 100%;
+    height: 15%;
+    background-color: #d9cccc;
+}
+
+#contents .notice {
+    width: 100%;
+    height: 35%;
+    background-color: #bdacac;
+}
+
+#contents .gallery {
+    width: 100%;
+    height: 35%;
+    background-color: #9e9090;
+}
+
+#contents .link {
+    width: 100%;
+    height: 15%;
+    background-color: #9a8989;
+}
+
+#slider {
+    width: calc(100% - 600px);
+    height: 100%;
+    background-color: #a79f9f;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer .footer1 {
+    width: 200px;
+    height: 120px;
+    background-color: #a9a7a7;
+}
+
+#footer .footer2 {
+    width: calc(100% - 400px);
+}
+
+#footer .footer2-1 {
+    width: 100%;
+    height: 60px;
+    background-color: #807f7f;
+}
+
+#footer .footer2-2 {
+    width: 100%;
+    height: 60px;
+    background-color: #706e6e;
+}
+
+#footer .footer3 {
+    width: 200px;
+    height: 120px;
+    background-color: #6f6a6a;
+}

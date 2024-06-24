@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    // S1 : 페이드인/아웃
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            let currentIndex = 0;
+
+            setInterval(function(){
+                let nextIndex = (currentIndex + 1) % 3;
+
+                $(".slider").eq(currentIndex).fadeOut(1200);
+                $(".slider").eq(nextIndex).fadeIn(1200);
+
+                currentIndex = nextIndex;
+            }, 3000)
+        })
+    </script>
+
+    // S2 : 좌우 슬라이드
+    <script>
+        $(function(){
+            let currentIndex = 0;
+            $(".sliderWrap").append($(".slider").first().clone(true));
+
+            setInterval(function(){
+                currentIndex ++;    // 현재 이미지를 1씩 증가
+
+                $(".sliderWrap").animate({marginLeft : -currentIndex * 100 + "%"}, 600);
+
+                if(currentIndex == 3)   // 마지막 이미지일때
+                setTimeout(function(){
+                    $(".sliderWrap").animate({marginLeft:0},0);
+                    currentIndex=0;
+                },700);
+            },3000)      // 3초에 한번씩 실행
+        });
+    </script>
+
+    // S3 : 위아래유형
+    <script>
+        $(function(){
+            let currentIndex = 0;
+            $(".sliderWrap").append($(".slider").first().clone(true));
+
+            setInterval(function(){     // 3초에 한번씩 증가
+                currentIndex ++;    // 현재 이미지를 1씩 증가
+                $(".sliderWrap").animate({marginTop: -currentIndex * 300 + "px" },600);
+
+                $(currentIndex == 3);
+                setInterval(function(){
+                    $(".sliderWrap").animate({marginTop:0},0)
+                    currentIndex = 0;
+                },600)
+            },3000);
+
+        });
+    </script>
+
+    // M1: 메뉴 가로유형 : 한개씩 내려오기
+    <script>
+        $(function(){
+            $(".nav > ul > li").mouseover(function(){
+                $(this).find(".submenu").stop.sildeDown();
+            });
+            $(".nav > ul > li").mouseout(function(){
+                $(this).find(".submenu").stop.sildeUp();
+            });
+        });
+
+        // M4 메뉴 세로 유형 : 한개씩 내려오기
+        $(function(){
+            $(".nav > ul > li").mouseover(function(){
+                $(this).find(".submenu").s
+            })
+        })
+    </script>
+</body>
+</html>
